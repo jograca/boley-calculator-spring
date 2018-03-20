@@ -20,8 +20,8 @@ public class CalculatorApiControllerTests {
 	@Test
 	public void givenTwoNumbersOneAndTwo_whenCalculate_thenReturnResultThree() {
 		// Arrange
-		calculator.setFirstNumber(3);
-		calculator.setSecondNumber(0);
+		calculator.setFirstNumber(1);
+		calculator.setSecondNumber(2);
 		calculator.setOperation("add");
 
 		// Act
