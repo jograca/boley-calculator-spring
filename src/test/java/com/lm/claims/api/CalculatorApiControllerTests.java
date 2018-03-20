@@ -26,7 +26,6 @@ public class CalculatorApiControllerTests {
 
 		// Act
 		double result = contoller.calculateResult(calculator);
-		System.out.println(result);
 
 		// Assert
 		assertEquals(3, result, 0);
