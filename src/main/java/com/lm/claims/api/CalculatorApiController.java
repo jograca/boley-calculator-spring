@@ -19,15 +19,18 @@ public class CalculatorApiController {
 	public double calculateResult(@RequestBody Calculator calculator) {
 
 		double result = 0;
+		double first = calculator.getFirstNumber();
+		double second = calculator.getSecondNumber();
+		String operator = calculator.getOperation();
 
-		if ("add".equals(calculator.getOperation())) {
-			result = calculator.getFirstNumber() + calculator.getSecondNumber();
-		} else if ("subtract".equals(calculator.getOperation())) {
-			result = calculator.getFirstNumber() - calculator.getSecondNumber();
-		} else if ("multiply".equals(calculator.getOperation())) {
-			result = calculator.getFirstNumber() * calculator.getSecondNumber();
-		} else if ("divide".equals(calculator.getOperation())) {
-			result = calculator.getFirstNumber() / calculator.getSecondNumber();
+		if ("add".equals(operator)) {
+			result = first + second;
+		} else if ("subtract".equals(operator)) {
+			result = first - second;
+		} else if ("multiply".equals(operator)) {
+			result = first * second;
+		} else if ("divide".equals(operator)) {
+			result = first / second;
 		} else {
 			throw new RuntimeException("Operation not implemented");
 		}
